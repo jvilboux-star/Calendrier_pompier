@@ -1,0 +1,19 @@
+workflows:
+  android-apk-test:
+    name: Android APK - Test
+    max_build_duration: 30
+    environment:
+      flutter: stable
+    scripts:
+      - name: Creer le projet Android
+        script: |
+          chmod +x scripts/prepare_android.sh
+          ./scripts/prepare_android.sh
+      - name: Installer les dependances Flutter
+        script: |
+          flutter pub get
+      - name: Generer l APK de test
+        script: |
+          flutter build apk --debug
+    artifacts:
+      - build/app/outputs/flutter-apk/*.apk

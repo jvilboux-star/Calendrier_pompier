@@ -1,0 +1,18 @@
+name: pompier_calendriers
+description: Application simple de suivi de tournee de calendriers pour sapeur-pompier.
+publish_to: 'none'
+version: 0.2.0+2
+
+environment:
+  sdk: '>=3.6.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_map: 8.3.2
+  geolocator: 14.1.1
+  latlong2: 0.10.1
+  shared_preferences: 2.5.3
+
+flutter:
+  uses-material-design: true
